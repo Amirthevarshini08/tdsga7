@@ -1,1 +1,89 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Quarterly Earnings Report</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/theme/sky.css" id="theme">
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<h1>Quarterly Earnings Report</h1>
+					<h3>Q3 2025 Financial Review</h3>
+					<p>Technical Consultant</p>
+					<p><small>Contact: 22f3000033@ds.study.iitm.ac.in</small></p>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						## Agenda
+						- Financial Highlights & Key Metrics
+						- Performance Analysis (YoY)
+						- Technical Deep Dive: EPS Calculation
+						- Future Growth & Outlook
+					</textarea>
+				</section>
+
+				<section>
+					<h2>Q3 Financial Highlights</h2>
+					<ul>
+						<li class="fragment"><strong>Total Revenue:</strong> $1.2 Billion (+15% YoY)</li>
+						<li class="fragment"><strong>Net Profit:</strong> $250 Million (+22% YoY)</li>
+						<li class="fragment"><strong>Earnings Per Share (EPS):</strong> $1.75 (+25% YoY)</li>
+					</ul>
+					<aside class="notes">
+						Excellent growth this quarter. Emphasize the strong year-over-year increase in both revenue and profitability. The EPS growth is particularly noteworthy for investors.
+					</aside>
+				</section>
+
+				<section>
+					<h2>EPS Calculation Logic</h2>
+					<pre><code class="python" data-line-numbers="1-4|6-7">
+import pandas as pd
+
+def calculate_eps(net_income, preferred_dividends, shares_outstanding):
+  """Calculates Earnings Per Share (EPS)."""
+  return (net_income - preferred_dividends) / shares_outstanding
+
+# Example for Q3
+eps_q3 = calculate_eps(250_000_000, 5_000_000, 140_000_000)
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Forecasting: CAGR Formula</h2>
+					<p>We use the Compound Annual Growth Rate (CAGR) for projections:</p>
+					\[ \text{CAGR} = \left( \frac{\text{Ending Value}}{\text{Beginning Value}} \right)^{\frac{1}{\text{n}}} - 1 \]
+					<p><small>Where 'n' is the number of years.</small></p>
+				</section>
+
+				<section>
+					<h2>Thank You</h2>
+					<p>Q&A Session</p>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/plugin/markdown/markdown.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/plugin/highlight/highlight.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/plugin/notes/notes.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/plugin/math/math.js"></script>
+
+		<script>
+			// Initialize RevealJS and enable the plugins
+			Reveal.initialize({
+				history: true,
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
+			});
+		</script>
+	</body>
+</html>
